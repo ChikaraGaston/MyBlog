@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  tomcat:
+    max-swallow-size: 10MB
+
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+
+
+ucloud:
+  ufile:
+    public-key: TOKEN_284caecf-4e96-499d-84b5-c1346e46e4bf
+    private-key: b249a038-11c3-43ce-92aa-de4d73768da8
+    bucket-name: pzr
+    region: cn-bj
+    suffix: ufileos.com
+    expires: 315360000
+
+
+
+comment.avatar: /images/avatar.png

@@ -1,0 +1,41 @@
+server:
+  port: 8080
+  tomcat:
+    max-swallow-size: 10MB
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: uZS4KEui1/mUiN+qSjQraQ==
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+    show-sql: true
+
+# ucloud 配置
+ucloud:
+  ufile:
+    public-key: TOKEN_284caecf-4e96-499d-84b5-c1346e46e4bf
+    private-key: b249a038-11c3-43ce-92aa-de4d73768da8
+    bucket-name: pzr
+    region: cn-bj
+    suffix: ufileos.com
+    expires: 315360000
+
+  servlet:
+    multipart:
+      max-file-size: 100MB             # 单个文件最大大小
+      max-request-size: 100MB          # 所有上传文件最大大小
+
+logging:
+  level:
+    root: info
+    com.pzr: debug
+  file:
+    name: log/blog-dev.log
+
+
+
